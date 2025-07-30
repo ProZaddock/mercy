@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercy Nthambi - Teacher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fdfdfd;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #004080;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { font-size: 1.5rem; font-weight: bold; }
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li { margin: 0 1rem; }
+        .nav-links a { color: #fff; text-decoration: none; }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #004080, #0099ff);
+            color: #fff;
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+        .hero h1 span { color: #ffdd57; }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background: #ffdd57;
+            color: #222;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        /* About Section */
+        .about { padding: 4rem 2rem; text-align: center; }
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .about-container img {
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            width: 200px;
+        }
+        /* Subjects Section */
+        .subjects {
+            background: #f4f4f4;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .subject-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            margin-top: 2rem;
+        }
+        .subject-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .subject-card h3 { color: #004080; }
+        /* Gallery Section */
+        .gallery {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-top: 2rem;
+        }
+        .gallery-grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .testimonial {
+            max-width: 600px;
+            margin: 1rem auto;
+            font-style: italic;
+            color: #444;
+        }
+        /* Contact Section */
+        .contact { padding: 4rem 2rem; text-align: center; }
+        .contact form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            margin: 0.5rem 0;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        /* Footer */
+        footer {
+            background: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #004080;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 200px;
+            }
+            .nav-links.show { display: flex; }
+            .menu-toggle { display: block; }
+            .about-container { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Mercy Nthambi</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Mercy Nthambi</span></h1>
+            <p>Dedicated Mathematics & Chemistry Teacher</p>
+            <a href="#gallery" class="btn">View My Gallery</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="https://via.placeholder.com/300" alt="Mercy Nthambi">
+            <p>
+                I am a passionate Mathematics and Chemistry teacher with a strong commitment
+                to helping students excel academically. I use interactive teaching techniques
+                and real-life applications to make learning enjoyable and effective.
+            </p>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="subjects" class="subjects">
+        <h2>Subjects I Teach</h2>
+        <div class="subject-grid">
+            <div class="subject-card">
+                <h3>Mathematics</h3>
+                <p>From algebra to calculus, I simplify mathematical concepts and help
+                   students master problem-solving skills.</p>
+            </div>
+            <div class="subject-card">
+                <h3>Chemistry</h3>
+                <p>I use experiments, visual aids, and practical examples to make chemistry
+                   engaging and easier to understand.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2>My Gallery</h2>
+        <p>Click an image to view in full size</p>
+        <div class="gallery-grid">
+            <a href="https://via.placeholder.com/800" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Classroom Activity 1"></a>
+            <a href="https://via.placeholder.com/800" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Chemistry Lab"></a>
+            <a href="https://via.placeholder.com/800" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Math Workshop"></a>
+            <a href="https://via.placeholder.com/800" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Students Presentation"></a>
+            <a href="https://drive.google.com/drive/folders/1nwl5LbiKosDVQ0LFuA6F8N8tl3j8_JCJ?usp=drive_link" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Galary one"></a>
+            <a href="https://drive.google.com/drive/folders/1hJORDa-kuAyJ0vmn6xJckxmWund7RDu8?usp=drive_link" target="_blank"><img src="https://via.placeholder.com/300x200" alt="Galary two"></a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Students Say</h2>
+        <p class="testimonial">"Ms. Mercy is the best teacher I've ever had! She makes
+            complex topics easy and fun to learn." – Former Student</p>
+        <p class="testimonial">"Her chemistry lessons are engaging and helped me improve my
+            grades significantly." – Parent</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Mercy Nthambi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
